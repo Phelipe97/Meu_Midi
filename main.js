@@ -9,13 +9,19 @@ let contador = 0;
 
 while (contador < listaDeTeclas.length){
 
-    listaDeTeclas[contador].onclick = function (){
-        tocaSom('#som_tecla_pom');
+    const teclas = listaDeTeclas[contador];
+
+    const instrumento = teclas.classList[1];
+
+    //Template string
+    const idAudio = `#som_${instrumento}`;
+
+    teclas.onclick = function (){
+        tocaSom(idAudio);
     }
 
     contador ++;
 
-    console.log(contador);
 }
 
 
