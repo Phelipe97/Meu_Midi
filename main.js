@@ -20,8 +20,6 @@ for(let contador =0;contador < listaDeTeclas.length;contador ++){
     }
     teclas.onkeydown = function(clique){
 
-        console.log(clique);
-
         if(clique.code ==="Enter"||clique.code === "Space"){
             teclas.classList.add('ativa');
         }
